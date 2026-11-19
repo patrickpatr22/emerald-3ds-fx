@@ -4,6 +4,17 @@
 #include <stdbool.h>
 #include <citro3d.h>
 
+/*
+ * FX boost: an exaggerated look for the voxel world, to see how far the
+ * hardware's light and particles go - deeper shadows and warmer sun, strong
+ * sun rays and dapples, a wide bloom, five times the sunlit dust, and
+ * fireflies at night (DAY / NIGHT on AUTO). The extra particles are halved
+ * on an Old 3DS. 0 builds the release look exactly.
+ */
+#ifndef CTR_VOXEL_FX_BOOST
+#define CTR_VOXEL_FX_BOOST 1
+#endif
+
 bool CtrVoxel_Init(void);
 void CtrVoxel_Shutdown(void);
 

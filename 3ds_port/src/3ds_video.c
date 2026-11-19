@@ -10007,7 +10007,12 @@ static void VoxelDiorama(void)
  */
 #define BLOOM_W (CTR_GAME_WIDTH / 4)
 #define BLOOM_H (CTR_GAME_HEIGHT / 4)
+#if CTR_VOXEL_FX_BOOST
+/* Boosted (ctr_voxel.h): far more of the picture glows. */
+#define BLOOM_THRESHOLD 0.70f
+#else
 #define BLOOM_THRESHOLD 0.85f
+#endif
 
 static void VoxelBloomPrepare(void)
 {
